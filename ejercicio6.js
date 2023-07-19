@@ -8,37 +8,79 @@
 
 
 
-// function comparacion(){
-//     var compara= parseInt(prompt("Introduce la clave: "));
-//     for(var n= 3; n>0; n--){
+function comparacion(){
+    var compara= parseInt(prompt("Introduce la clave: "));
+    for(var i=0;i<=2;i++){
         
-//         if(compara == 123456){
-//             document.write("Has introducido la clave correctamente" + "</br>");
-//         }
-//         else if(compara != 123456){
-//             parseInt(prompt("No has introducido la clave correcta, vuelve a intentarlo"));
-//         }
-//         else{
-//             document.write("Te has quedado sin intentos")
-//         }
+        if(compara != 123456){
+            console.log("contraseña incorrecta");
+            parseInt(prompt("No has introducido la clave correcta, vuelve a intentarlo"));
+        }
+        else if(compara == 123456){
+            console.log("contraseña correcta");
+            document.write("Has introducido la clave correctamente" + "</br>");
+            break;
+        }
 
+    }
+}
+comparacion()
+ 
+for ( var i=0;i<=2;i++) { 
+   	document.write(i + "<br>")
+}
+
+// var compara = parseInt(prompt("Introduce la clave"));
+// if(compara==123456){
+//     document.write("Has introducido la clave correctamente" + "</br>");
+// }
+// else{
+//     parseInt(prompt("No has introducido la clave correcta, vuelve a intentarlo"));
+// }
+
+// var clave=123456 
+// var clave2=parseInt(prompt("Introduce la clave"));
+// if (clave == clave2){ 
+//    document.write("Has introducido la clave correctamente");
+// }
+// else if (clave > clave2) { 
+//     console.log("clave incorrecta 1")
+//     parseInt(prompt("Introduce la clave")); 
+// }
+// else{ 
+//     console.log("clave incorrecta 2")
+//     parseInt(prompt("Introduce la clave"));
+//     document.write("Clave incorrecta")
+// } 
+
+// function compara(){
+//     var clave2=parseInt(prompt("Introduce la clave"));
+//     if (clave == clave2){ 
+//     document.write("Has introducido la clave correctamente");
 //     }
+//     else if (clave > clave2) { 
+//         console.log("clave incorrecta 1")
+//         parseInt(prompt("Introduce la clave")); 
+//     }
+//     else{ 
+//         console.log("clave incorrecta 2")
+//         parseInt(prompt("Introduce la clave"));
+//         document.write("Clave incorrecta")
+//     } 
 // }
 
 
-var compara= parseInt(prompt("Introduce la contraseña: "));
-function comparacion(){
-    if(compara==123456){
-        document.write("Has introducido la clave correctamente" + "</br>");
-        console.log("Has introducido la clave correctamente");
-    }
-    else if(compara!=123456){
-        parseInt(prompt("Introduce la contraseña: "));
-    }
-    else{
-        document.write("No has introducido la clave correctamente" + "</br>");
-        console.log("No has introducido la clave correctamente");
-    }
-}
-
-comparacion()
+// var compara= parseInt(prompt("Introduce la contraseña: "));
+// function comparacion(){
+//     if(compara==123456){
+//         document.write("Has introducido la clave correctamente" + "</br>");
+//         console.log("Has introducido la clave correctamente");
+//     }
+//     else if(compara!=123456){
+//         parseInt(prompt("Introduce la contraseña: "));
+//     }
+//     else{
+//         document.write("No has introducido la clave correctamente" + "</br>");
+//         console.log("No has introducido la clave correctamente");
+//     }
+// }
