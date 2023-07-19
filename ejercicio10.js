@@ -18,41 +18,40 @@
 var importe= parseInt(prompt("Introduce el total de tu compra:"));
 var mes= prompt("Introduce el mes de tu compra: ");
 
-switch(mes){
-    case "enero":
-        document.write("Total de tu compra: "+importe * 0.80+ "€");
-        break;
-    case "febrero":
-        document.write("Total de tu compra: "+importe * 0.80+ "€");
-        break;
-    case "julio":
-        document.write("Total de tu compra: "+importe * 0.85+ "€");
-        break;
-    case "agosto":
-        document.write("Total de tu compra: "+importe * 0.85+ "€");
-        break;
-    case "octubre":
-        document.write("Total de tu compra: "+importe * 0.85+ "€");
-        break;
-    case "noviembre":
-        document.write("Total de tu compra: "+importe * 0.75+ "€");
-        break;
-    case "diciembre":
-        document.write("Total de tu compra: "+importe * 0.75+ "€");
-        break;
-    default:
-        importe + "€";
+function descuento(){
+    switch(mes.toLocaleLowerCase()){
+        case "enero":
+            document.write("<h3>Total de tu compra: "+importe+ "€ </h3>");
+            document.write("<h1>Total de tu compra con descuento: "+importe * 0.80+ "€</h1>");
+            break;
+        case "febrero":
+            document.write("<h3>Total de tu compra: "+importe+ "€ </h3>");
+            document.write("<h1>Total de tu compra con descuento: "+importe * 0.80+ "€</h1>");
+            break;
+        case "julio":
+            document.write("<h3>Total de tu compra: "+importe+ "€ </h3>");
+            document.write("<h1>Total de tu compra con descuento: "+importe * 0.85+ "€</h1>");
+            break;
+        case "agosto":
+            document.write("<h3>Total de tu compra: "+importe+ "€ </h3>");
+            document.write("<h1>Total de tu compra con descuento: "+importe * 0.85+ "€</h1>");
+            break;
+        case "octubre":
+            document.write("<h3>Total de tu compra: "+importe+ "€ </h3>");
+            document.write("<h1>Total de tu compra con descuento: "+importe * 0.85+ "€</h1>");
+            break;
+        case "noviembre":
+            document.write("<h3>Total de tu compra: "+importe+ "€ </h3>");
+            document.write("<h1>Total de tu compra con descuento: "+importe * 0.75+ "€</h1>");
+            break;
+        case "diciembre":
+            document.write("<h3>Total de tu compra: "+importe+ "€ </h3>");
+            document.write("<h1>Total de tu compra con descuento: "+importe * 0.75+ "€</h1>");
+            break;
+        default:
+            document.write("<h1>Total de tu compra: "+importe + "€</h1>");
+    }
 }
 
-// function descuento(){
-//     if(mes.toLowerCase()=="octubre"){
-//         console.log("Total de tu compra: "+importe * 0.85+ "€");
-//         document.write("Total de tu compra: "+importe * 0.85+ "€");
-//     }
-//     else{
-//         console.log("Total de tu compra: "+importe + "€");
-//         document.write("Total de tu compra: "+importe + "€")
-//     }
-// }
 
-// descuento();
+ descuento();
