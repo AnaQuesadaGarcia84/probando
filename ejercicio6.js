@@ -11,9 +11,7 @@ var intentos =3;
 function comparacion(){
     var compara= parseInt(document.getElementById("number").value);
     if(intentos>0){
-
-
-        
+    
         if(compara != 123456){
             console.log("contraseña incorrecta");
 
@@ -28,7 +26,8 @@ function comparacion(){
         intentos--;
     }
 }
-// comparacion()
+
+ comparacion()
  
 // for ( var i=0;i<=2;i++) { 
 //    	document.write(i + "<br>")
