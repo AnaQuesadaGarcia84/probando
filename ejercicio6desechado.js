@@ -1,3 +1,22 @@
+// Solicitar clave
+// Si es correcta, decir clave correcta
+// Sino volver a solicitar introducir la clave
+// Si es correcta, decir clave correcta
+// Sino volver a solicitar introducir la clave
+// Si es correcta, decir clave correcta
+// Sino decir clave incorrecta no quedan más oportunidades
+
+var compara = parseInt(prompt("Introduce la clave"));
+var contador=3;
+
+function comparacion(){
+    if(compara==123456){
+        document.write("Has introducido la clave correctamente" + "</br>");
+    }
+}
+
+
+
 // for ( var i=0;i<=2;i++) { 
 //    	document.write(i + "<br>")
 // }
