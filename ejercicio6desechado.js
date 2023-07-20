@@ -6,25 +6,25 @@
 // Si es correcta, decir clave correcta
 // Sino decir clave incorrecta no quedan más oportunidades
 
-// var compara = parseInt(prompt("Introduce la clave"));
+ var compara = parseInt(prompt("Introduce la clave"));
 // var contador=3;
 
-// function comparacion(){
-//     console.log("Hola estás en la función")
-//     for ( var i=0;i<=2;i++) { 
-//         if(compara==123456){
-//             console.log("Estoy en el if")
-//             document.write("Has introducido la clave correctamente" + "</br>");
-//             break;    
-//         }
-//         else{
-//             console.log("Estoy en el else")
-//             parseInt(prompt("No has introducido la clave correcta, vuelve a intentarlo"));
-//         } 
-//     }
-// }
+function comparacion(){
+    console.log("Hola estás en la función")
+    for (var i=0;i<3;i++) { 
+        if(compara==123456){
+            console.log("Estoy en el if")
+            document.write("Has introducido la clave correctamente" + "</br>");
+            break;
+        }
+        else{
+            console.log("Estoy en el else")
+            parseInt(prompt("No has introducido la clave correcta, vuelve a intentarlo"));
+        } 
+    }
+}
 
-// comparacion();
+ comparacion();
 
 
 
