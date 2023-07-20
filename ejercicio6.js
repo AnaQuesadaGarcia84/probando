@@ -7,21 +7,20 @@
 // Sino decir clave incorrecta no quedan más oportunidades
 
 
-var intentos =3;
 function comparacion(){
-    var compara= parseInt(document.getElementById("number").value);
-    if(intentos>0){    
-        if(compara != 123456){
-            console.log("contraseña incorrecta");
-            alert("No has introducido la clave correcta, vuelve a intentarlo");
+    console.log("Hola estás en la función")
+    for (var i=0;i<3;i++) { 
+        var compara = Number(prompt("Introduce la clave"));
+        if(compara==123456){
+            console.log("Estoy en el if")
+            document.write("<h1>Has introducido la clave correctamente</h1>" + "</br>");
+            break;
         }
         else{
-            console.log("contraseña correcta");
-            document.write("Has introducido la clave correctamente" + "</br>");
-        }
-        intentos--;
+            console.log("Estoy en el else")
+        } 
     }
 }
 
- comparacion()
+ comparacion();
 
