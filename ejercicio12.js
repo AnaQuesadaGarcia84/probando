@@ -2,6 +2,8 @@
 // •	Entrada de Operador: Ej. (“25” + 25)
 // •	Salida del resultado:
 
+var datos=eval(prompt("Mete los datos a comprobar"));
+document.write(datos);
 
 
 
