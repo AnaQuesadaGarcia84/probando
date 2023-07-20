@@ -1,5 +1,3 @@
-//var user, contrasena;
-
 function verrificar(){
     var user= prompt("Introduce tu usuario");
 
@@ -23,6 +21,5 @@ function verrificar(){
         document.write("<h1>Usuario incorrecto</h1>");
     }
 }
-
 
 verrificar();

@@ -1,15 +1,3 @@
-// Escribir “escribe el importe de la compra”
-// Leer importe //Int
-// Escribir “Introduce el mes”
-// Leer mes // String
-// //Si el mes es octubre, se aplicará el descuento
-// Si (mes=”octubre”) Entonces
-// total<-importe*0.85
-// Sino
-// total<-importe
-// FinSi
-// Escribir total
-
 var importe= parseInt(prompt("Introduce el total de tu compra:"));
 var mes= prompt("Introduce el mes de tu compra: ");
 

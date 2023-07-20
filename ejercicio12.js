@@ -1,10 +1,11 @@
-// Se plantea la creación de un script en un archivo de javascript, para comprobar Operadores:
-// •	Entrada de Operador: Ej. (“25” + 25)
-// •	Salida del resultado:
 
-var datos=eval(prompt("Mete los datos a comprobar"));
-document.write(datos);
-
+function comprobar(){
+    let operador = document.getElementById("operadores").value;
+    resultado = eval(operador);
+    document.getElementById("resultado").innerHTML="Resultado: "+ resultado;
+    //var datos=eval(prompt("Mete los datos a comprobar"));
+    // document.write(datos);
+}
 
 
 
