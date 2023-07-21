@@ -43,8 +43,20 @@ document.getElementById('calcula2').onclick=function contar(){
         "El porcentaje de niñas es: " + porcentninas.toFixed(2) + "% y el porcentaje de niños es: " + porcentninos.toFixed(2) +"%");
 }
 
-
 //EJERCICIO 5
+document.getElementById('calcula2').onclick=function descuento(){
+    var importe= parseInt(document.getElementById('total').value);
+    var mes= document.getElementById('mes').value;
+    
+    if(mes.toLowerCase()=="octubre"){
+        console.log("Total de tu compra: "+importe * 0.85+ "€");
+        document.write("Total de tu compra: "+importe * 0.85+ "€");
+    }
+    else{
+        console.log("Total de tu compra: "+importe + "€");
+        document.write("Total de tu compra: "+importe + "€")
+    }
+}
 
 //EJERCICIO 6
 
