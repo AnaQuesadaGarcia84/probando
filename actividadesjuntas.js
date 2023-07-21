@@ -29,20 +29,18 @@ document.getElementById('compara').onclick=function compara(){
 }
 
 //EJERCICIO 4
-document.getElementById('calcula').onclick=function contar(){
-    var ninos = document.getElementById('ninos').value;
-    var ninas = document.getElementById('ninas').value;
+document.getElementById('calcula2').onclick=function contar(){
+    var ninos = parseInt(document.getElementById('ninos').value);
+    var ninas = parseInt(document.getElementById('ninas').value);
 
     console.log("Niños: "+ninos+" Niñas: "+ninas);
 
-    //document.write("Niños: "+ ninos + "<br>");
-    //document.write("Niñas: "+ ninas+ "<br>");
-    // var totalninos = ninos + ninas;
-    // var porcentninos = (ninos*100)/ totalninos;
-    // var porcentninas = (ninas*100)/ totalninos;
+    var totalninos = ninos + ninas;
+    var porcentninos = (ninos*100)/ totalninos;
+    var porcentninas = (ninas*100)/ totalninos;
 
-    // console.log("El porcentaje de niñas es: " + porcentninas + " y el porcentaje de niños es: " + porcentninos);
-    // document.write("El porcentaje de niñas es: " + porcentninas + " y el porcentaje de niños es: " + porcentninos+ "<br>");
+    document.getElementById('porcentaje').innerHTML=("Hay " +ninas+ " niñas y " + ninos+" niños<br>"+
+        "El porcentaje de niñas es: " + porcentninas.toFixed(2) + "% y el porcentaje de niños es: " + porcentninos.toFixed(2) +"%");
 }
 
 
