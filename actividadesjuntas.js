@@ -44,12 +44,13 @@ document.getElementById('calcula2').onclick=function contar(){
 }
 
 //EJERCICIO 5
-document.getElementById('calcula2').onclick=function descuento(){
+document.getElementById('calcula3').onclick=function descuento(){
     var importe= parseInt(document.getElementById('total').value);
     var mes= document.getElementById('mes').value;
     
+    console.log("Total compra: " + importe+ "Mes compra: "+mes);
     if(mes.toLowerCase()=="octubre"){
-        console.log("Total de tu compra: "+importe * 0.85+ "€");
+        document.getElementById("compra").innerHTML=("Total de tu compra: "+importe * 0.85+ "€");
         document.write("Total de tu compra: "+importe * 0.85+ "€");
     }
     else{
