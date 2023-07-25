@@ -30,10 +30,10 @@ document.getElementById('validar').onclick=function validar(){
 
     // } )
    // document.getElementById("mostrar").innerHTML=alumnos[0]+alumnos[1]+alumnos[2]+alumnos[3]
-    for(let i; i<alumnos.length;i++){
+    for(let i=0; i<alumnos.length;i++){
         var newdiv = document.createElement("div");
         document.getElementById("mostrar").appendChild(newdiv);
-        newdiv.id=`id${i}`;
+        newdiv.id="id"+i;
         document.getElementById(`id${i}`).innerHTML=alumnos[i];
 
     }
