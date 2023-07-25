@@ -20,7 +20,7 @@ document.getElementById('validar').onclick=function validar(){
     var tel=document.getElementById('telefono').value;
     var lenguaje=document.getElementById('lenguaje').value
     
-    console.log(codigo, nombre,edad,mail,tel,lenguaje);
+    //console.log(codigo, nombre,edad,mail,tel,lenguaje);
 
     //Introducimos los datos en el array
     arrDatos.push(codigo, nombre,edad,mail,tel,lenguaje);
