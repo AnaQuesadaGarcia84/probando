@@ -4,16 +4,6 @@
 var temperaturas_cuidades = new Array(new Array (12,10,11), new Array(5,0,2),new Array(10,8,10));
 console.log(temperaturas_cuidades);
 
-// temperaturas_cuidades.forEach(function(temperatura){
-//     console.log(temperatura);
-// })
-
-// for(i=0; i<temperaturas_cuidades.length;i++){
-//     console.log(temperaturas_cuidades[i]);
-//     document.getElementById("respuesta").innerHTML="Ciudad 1: "+temperaturas_cuidades[i]+ " Ciudad 2:"+temperaturas_cuidades[i]+" Ciudad 3:"+temperaturas_cuidades[i]
-// }
-
-
 
 for (i=0;i<temperaturas_cuidades.length;i++){
     document.write("<br><b>Ciudad " + i + "</b>"+" ")

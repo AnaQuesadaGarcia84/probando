@@ -50,22 +50,12 @@ document.getElementById('calcula3').onclick=function descuento(){
     
     console.log("Total compra: " + importe+ "Mes compra: "+mes);
     if(mes.toLowerCase()=="octubre"){
-        document.getElementById("compra").innerHTML=("Total de tu compra: "+importe * 0.85+ "€");
-        document.write("Total de tu compra: "+importe * 0.85+ "€");
+        document.getElementById('compra').innerHTML="Total de tu compra: "+importe * 0.85+ "€"
     }
     else{
-        console.log("Total de tu compra: "+importe + "€");
-        document.write("Total de tu compra: "+importe + "€")
+        document.getElementById('compra').innerHTML="Total de tu compra: "+importe+ "€"
     }
 }
-
-//EJERCICIO 6
-
-//EJERCICIO 9
-
-//EJERCICIO 10
-
-//EJERCICIO 11
 
 //EJERCICIO 12
 function comprobar(){
@@ -73,3 +63,11 @@ function comprobar(){
     resultado = eval(operador);
     document.getElementById("resultado").innerHTML="Resultado: "+ resultado;
 }
+
+//EJERCICIO CAMBIAR IMAGEN
+function cambiar(){
+    document.getElementById('hadas').src="media/imagen2.jpg";
+  }
+  function volver(){
+    document.getElementById('hadas').src="media/imagen1.jpg";
+  }

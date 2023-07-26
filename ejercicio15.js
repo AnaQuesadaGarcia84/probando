@@ -8,5 +8,5 @@ var nombres;
 nombres=['Pepe','Juan','María','Pepa','Joline'];
 
 for(var i=0; i<nombres.length; i++){
-    document.write(i+" "+nombres[i]+"<br>");
+    document.write("<h2>"+i+" "+nombres[i]+"</h2>");
 }

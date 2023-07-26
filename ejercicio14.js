@@ -5,5 +5,6 @@ var diasSemana;
 console.log(diasSemana)
 diasSemana=['Lunes', 'Martes','Miércoles','Jueves','Viernes', 'Sábado','Domingo'];
 
-document.write(diasSemana+"<br>");
-document.write(diasSemana[3]);
+
+document.getElementById('semana').innerHTML=diasSemana;
+document.getElementById('dia').innerHTML=diasSemana[3];

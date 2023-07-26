@@ -8,7 +8,8 @@ function comparacion(){
             break;
         }
         else{
-            console.log("Estoy en el else")
+            console.log("Estoy en el else");
+            document.write("<h1>Te has quedado sin intentos</h1>" + "</br>");
         } 
     }
 }
