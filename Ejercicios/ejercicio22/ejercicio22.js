@@ -69,7 +69,7 @@ document.getElementById('botonAnadir').addEventListener('click', function(event)
 })
 
 window.addEventListener('load',()=>{
-    let alumnoEd=document.getElementById('alumnosEditar');
+    let alumnoEd=document.getElementById('alumnoEditar');
     let alumnoEl=document.getElementById('alumnoEliminar');
     for(let i=0; i<alumnos.length;i++){
         alumnoEd.innerHTML+=`<option>${alumnos[i].nombre}</option>`
