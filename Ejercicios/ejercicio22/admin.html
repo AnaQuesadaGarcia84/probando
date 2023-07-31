@@ -28,40 +28,35 @@
     <main>
         <div class="contenedor">
             <!-- Añadir -->
-            <div class="añadir">
+            <div class="anadir">
                 <h2>Añadir</h2>
                 <form>
-                    <label>Nombre del Alumno</label>
-                    <input type="text" id="alumnoAñadir" name="nombreDelAlumno">
+                    <input type="text" placeholder="Nombre alumno" id="alumnoAnadir" name="nombreDelAlumno"><br>
 
-                    <label>Apellidos del Alumno</label>
-                    <input type="text" id="apellidoAñadir">
+                    <input type="text" placeholder="Apellidos del alumno" id="apellidoAnadir"><br>
 
-                    <label>Correo Electrónico</label>
-                    <input type="email" id="emailAñadir">
+                    <input type="email" placeholder="E-mail" id="emailAnadir"><br>
 
-                    <label>Url Imagen</label>
-                    <input type="text" id="ImagenAñadir">
+                    <input type="text" placeholder="Añadir imagen" id="imagenAnadir"><br>
 
-                    <input class="button" type="button" id="botonAñadir" value="Añadir">
+                    <input class="button" type="button" id="botonAnadir" value="Anadir"><br>
                 </form>
             </div>
             <!-- Editar -->
             <div class="editar">
                 <h2>Editar</h2>
                 <form>
-                    <label>Nombre del Alumno</label>
                     <select id="alumnoEditar">
+                        <option value="">Nombre del alumno</option>
                         <option value="">---</option>
-                    </select>
+                    </select><br>
 
-                    <label>Atributo a cambiar</label>
                     <select id="atributoEditar">
+                        <option value="">Atributo a cambiar</option>
                         <option value="">---</option>
-                    </select>
+                    </select><br>
 
-                    <label>Nuevo atributo</label>
-                    <input type="text" id="nuevoAtributo">
+                    <input type="text" id="nuevoAtributo" placeholder="Nuevo valor"><br>
 
                     <input class="button" type="button" id="botonEditar" value="Editar">
                 </form>
@@ -72,8 +67,8 @@
                 <h2>Eliminar</h2>
 
                 <form>
-                    <label>Nombre del Alumno</label>
                     <select id="alumnoEliminar">
+                        <option value="">Nombre del alumno</option>
                         <option value="">---</option>
                     </select>
                     <input class="button" type="button" id="botonEliminar" value="Eliminar">

@@ -50,12 +50,12 @@ formulario.addEventListener('submit', function(){
     //Volvemos a mostrar el cuadro donde se mostrarán los datos introducidos
     boxInfo.style.display="block"
 
-    var iNombre= document.querySelector('#iNombre');
-    var iApellidos= document.querySelector('#iApellidos');
-    var iEdad=document.querySelector('#iEdad');
+    var iNombre= document.querySelector('#iNombre span');
+    var iApellidos= document.querySelector('#iApellidos span');
+    var iEdad=document.querySelector('#iEdad span');
 
-    iNombre.innerHTML="Nombre: "+nombre;
-    iApellidos.innerHTML="Apellidos: "+apellidos;
-    iEdad.innerHTML="Edad: "+edad
+    iNombre.innerHTML=nombre;
+    iApellidos.innerHTML=apellidos;
+    iEdad.innerHTML=edad
 })
 

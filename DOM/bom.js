@@ -43,7 +43,7 @@ window.addEventListener('load',() =>{
         console.log("Estas dentro del input");
     })
 
-    //Detectamos si has puksado fuera del input
+    //Detectamos si has pulsado fuera del input
     input.addEventListener('blur', function(){
         console.log("Estas fuera del input");
     })
