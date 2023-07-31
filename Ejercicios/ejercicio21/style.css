@@ -1,0 +1,38 @@
+.cuerpo{
+    display: flex;
+    font-size: 1.2em;
+}
+
+.formulario,.info{
+    width: 50%;
+    padding: 2em;
+}
+
+.boxInfo{
+    width: 40%;
+    border: dashed black 3px;
+    padding: 0.5em;
+}
+
+h3{
+    text-align: center;
+}
+
+input{
+    font-size: 1em;
+    width: 50%;
+    padding: 0.3em;
+    border-radius: 0.4em;
+}
+
+#submit{
+    padding: 0.5em;
+    width: 51%;
+    background: rgb(5, 109, 116);
+    color: white;
+}
+
+#submit:hover{
+    box-shadow: black 2px 2px 2px;
+    background: rgb(6, 150, 161);
+}

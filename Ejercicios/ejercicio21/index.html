@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario usuario</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="cuerpo">
+        <div class="formulario">
+            <form action="" method="post" id="formulario" onsubmit="return false">
+                <input type="text" placeholder="Nombre" id="nombre" name="nombre"><br>
+                <span id="errorNombre"></span><br>
+        
+                <input type="text" placeholder="Apellidos" id="apellidos" name="apellidos"><br>
+                <span id="errorApellidos"></span><br>
+        
+                <input type="number" name="edad" id="edad" placeholder="Edad"><br>
+                <span id="errorEdad"></span><br>
+        
+                <input type="submit" value="Enviar" id="submit"><br>
+            </form>
+        </div>
+        <div class="info">
+            <div class="boxInfo">
+                <h3>Información del usuario</h3>
+                <hr>
+                <p id="iNombre">
+                    Nombre: <span></span>
+                </p>
+                <p id="iApellidos">
+                 Apellidos: <span></span>
+                </p>
+                <p id="iEdad">
+                    Edad: <span></span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="ejercicio21.js"></script>
+</body>
+</html>
