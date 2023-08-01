@@ -16,7 +16,7 @@ const añadirApellido = document.getElementById('apellidoAñadir')
 const añadirEmail = document.getElementById('emailAñadir')
 const añadirImagen = document.getElementById('ImagenAñadir')
 
-document.getElementById("botonAñadir").addEventListener("click", function (event) {
+document.getElementById("botonAñadir").addEventListener("click", function(event){
     event.preventDefault()
     let alumnoAñadir = añadirAlumno.value
     let apellidoAñadir = añadirApellido.value

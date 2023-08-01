@@ -13,10 +13,10 @@ function obteberAlmacenamientoLocal(llave){
 let alumnos= obteberAlmacenamientoLocal('alumnos') || [];
 let mensaje=document.querySelector('#mensaje');
 
-var anadirAlumno = document.getElementById('alumnoAnadir');
-var anadirApellido = document.getElementById('apellidoAnadir');
-var anadirEmail = document.getElementById('emailAnadir');
-var anadirImagen = document.getElementById('imagenAnadir');
+const anadirAlumno = document.getElementById('alumnoAnadir');
+const anadirApellido = document.getElementById('apellidoAnadir');
+const anadirEmail = document.getElementById('emailAnadir');
+const anadirImagen = document.getElementById('imagenAnadir');
 
 //Dejamos al JS esperando el evento click en el botón enviar
 document.getElementById('botonAnadir').addEventListener('click', function(event){
@@ -26,6 +26,7 @@ document.getElementById('botonAnadir').addEventListener('click', function(event)
     let emailAnadir= anadirEmail.value;
     let imagenAnadir= anadirImagen.value;
 
+    console.log(alumnoAnadir+" "+apellidoAnadir+" "+emailAnadir+" "+imagenAnadir)
     let van=true;
 
     //Verificamos que los campos están vacíos para dar mensaje de error
@@ -59,7 +60,7 @@ document.getElementById('botonAnadir').addEventListener('click', function(event)
         })
         mensaje.classList.add('realizado');
         setTimeout(()=>{
-            mensaje.classList.remove('realizado');
+            mensaje.classList.remove('repetidoError');
             window.location.reload();
         },1500);
     }
@@ -68,27 +69,83 @@ document.getElementById('botonAnadir').addEventListener('click', function(event)
     guardarAlmacenamientoLocal('alumnos', alumnos);
 })
 
-window.addEventListener('load',()=>{
-    let alumnoEd=document.getElementById('alumnoEditar');
-    let alumnoEl=document.getElementById('alumnoEliminar');
-    for(let i=0; i<alumnos.length;i++){
-        alumnoEd.innerHTML+=`<option>${alumnos[i].nombre}</option>`
-        alumnoEl.innerHTML+=`<option>${alumnos[i].nombre}</option>`
-    }
-    Object.keys(alumnos[0]).forEach(element=>{
-        atributoEd.innerHTML+=`<option>${element}</option>`
-    });
-    let muestraAlumnos= document.getElementById('mostrarAlumnos');
-    muestraAlumnos.innerHTML='';
-    for(let i=0; i<alumnos.length; i++){
-        muestraAlumnos.innerHTML+=`
-        <div clas="contenedorAlumnos">
-        <img src="${alumnos[i].urlImagen}"> 
-        <div class=informacion>
-        <p>${alumnos[i].nombre}</p>
-        <p class="apellido"><span>Apellido: ${alumno[i].apellido}</span></p>
-        email:${alumnos[i].email}<p></p></div></div>`
-    }
+// window.addEventListener('load',()=>{
+//     const alumnoEd=document.getElementById('alumnoEditar');
+//     const alumnoEl=document.getElementById('alumnoEliminar');
+//     for(let i=0; i<alumnos.length;i++){
+//         alumnoEd.innerHTML+=`<option>${alumnos[i].nombre}</option>`
+//         alumnoEl.innerHTML+=`<option>${alumnos[i].nombre}</option>`
+//     }
+//     Object.keys(alumnos[0]).forEach(element=>{
+//         atributoEd.innerHTML+=`<option>${element}</option>`
+//     });
+
+//     let muestraAlumnos= document.getElementById('mostrarAlumnos');
+//     muestraAlumnos.innerHTML='';
+//     for(let i=0; i<alumnos.length; i++){
+//         muestraAlumnos.innerHTML+=`
+//         <div clas="contenedorAlumnos">
+//         <img src="${alumnos[i].urlImagen}"> 
+//         <div class=informacion>
+//         <p>${alumnos[i].nombre}</p>
+//         <p class="apellido"><span>Apellido: ${alumno[i].apellido}</span></p>
+//         email:${alumnos[i].email}<p></p></div></div>`
+//     }
     
-    obteberAlmacenamientoLocal();
+//     obteberAlmacenamientoLocal();
+// })
+
+const alumnoEd = document.getElementById('alumnoEditar')
+const atributoEd = document.getElementById('atributoEditar')
+const nuevoAtributoEd = document.getElementById('nuevoAtributo')
+
+document.getElementById("botonEditar").addEventListener("click", function (event) {
+    event.preventDefault()
+    let alumnoEditar = alumnoEd.value
+    let atributoEditar = atributoEd.value
+    let nuevoAtributo = nuevoAtributoEd.value
+    let van = false
+    if (alumnoEditar == '' || atributoEditar == '' || nuevoAtributo == '') {
+        mensaje.classList.add('llenarCampos')
+        setTimeout(() => { mensaje.classList.remove('llenarCampos') }, 2500)
+    }
+    else {
+        for (let i = 0; i < alumnos.length; i++) {
+            if (alumnos[i].nombre == alumnoEditar) {
+                alumnos[i][atributoEditar] = nuevoAtributo
+                van = true
+            }
+        }
+        if (van == true) {
+            mensaje.classList.add('realizado')
+            setTimeout(() => {
+                mensaje.classList.remove('realizado')
+                window.location.reload()
+            }, 1500);
+        }
+        else {
+            mensaje.classList.add('noExisteError')
+            setTimeout(() => { mensaje.classList.remove('noExsiteError') }, 2500);
+        }
+        guardarAlmacenamientoLocal('alumnos', alumnos);
+    }
+})
+
+// mostrar alumnos
+window.addEventListener("load", () => {
+    const alumnoEd = document.getElementById('alumnoEditar')
+    const alumnoEl = document.getElementById('alumnoEliminar')
+    for (let i = 0; i < alumnos.length; i++) {
+        alumnoEd.innerHTML += `<option>${alumnos[i].nombre}</option>`
+        alumnoEl.innerHTML += `<option>${alumnos[i].nombre}</option>`
+    }
+    Object.keys(alumnos[0]).forEach(element => {
+        atributoEd.innerHTML += `<option>${element}</option>`
+    });
+
+    let muestraalumnos = document.getElementById('mostrarAlumnos')
+    muestraalumnos.innerHTML = ''
+    for (let i = 0; i < alumnos.length; i++) {
+        muestraalumnos.innerHTML += `<div class="contenedorAlumnos"><img src="${alumnos[i].urlImagen}"><div class="informacion"><p>${alumnos[i].nombre}</p><p class="apellido"><span>Apellido: ${alumnos[i].apellido}</span></p> email: ${alumnos[i].email}<p></p></div></div>`
+    }
 })
