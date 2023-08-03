@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicación educación</title>
+    <link rel="stylesheet" href="aplicación.css">
+</head>
+<body>
+    <div class="navegador">
+        <img class="logo" src="media/logo.png" alt="Logo">
+        <nav>
+            <ul>
+                <li><button id="inicio" onclick="inicio()">Inicio</button></li>
+                <li><button id="cursos" onclick="cursos()">Cursos</button></li>
+                <li><button id="contacto" onclick="contacto()">Contacto</button></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="contenedor">
+        <div class="asides">
+            <div class="aside1">
+                <h3>Inicia Sesión</h3>
+                <input type="text" placeholder="E-mail"><br>
+                <input type="text" placeholder="Contraseña"><br>
+                <button id="profesor" class="boton">Profesor</button>
+                <button id="alumno" class="boton">Alumno</button>
+            </div>
+            <div class="aside2">
+                <img src="media/imagen-curso.jpg" alt="Anuncio curso">
+                <h4>Nuevo curso de JavaScript</h4><br>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi laborum tempore in voluptate autem explicabo provident possimus nihil at. Ab eos quisquam ratione. Adipisci nisi consequatur corporis ducimus placeat unde.</p>
+                <a href="curso.html"><button class="boton">Suscríbete</button></a>
+            </div>
+        </div>
+        <div id="cuerpo" class="cuerpo">
+            <div class="contenido" id="test">
+                <img src="media/contacto.jpg" alt="Imagen contacto">
+                <h1>Información</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique magnam necessitatibus, rem veniam accusamus atque? Eligendi fugiat in molestiae ullam similique quasi consectetur, quidem, obcaecati, praesentium ut corporis veritatis placeat?</p>
+                <a href="contacto.html"><button class="boton">Información</button></a>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&#169 Todos los derechos reservados</p>
+    </footer>
+    <script src="applicacion.js"></script>
+</body>
+</html>
