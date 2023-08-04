@@ -167,3 +167,23 @@ textarea{
 footer{
     text-align: center;
 }
+
+
+/* Ventana modal */
+.profesorEmergente{
+    background-color: #186dd5;
+    color: black;
+    position: fixed;
+    width: 40%;
+    top: 40%;
+    left: 40%;
+    visibility: hidden;
+    padding: 1.5em;
+    border-radius: 0.8em;
+}
+
+.profesorEmergente.active{
+    visibility: visible;
+    z-index: 2;
+}
+
