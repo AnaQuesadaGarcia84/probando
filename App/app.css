@@ -9,3 +9,25 @@
                         'aside cuerpo'
                         'footer footer';
 }
+
+header{
+    grid-area: header;
+    background-color: lightgoldenrodyellow;
+}
+
+.asides{
+    grid-area: aside;
+    background-color: lightcyan;
+}
+
+.contenido{
+    grid-area: cuerpo;
+    background-color: lightblue;
+}
+
+footer{
+    grid-area: footer ;
+    background-color: aqua;
+}
+
+
