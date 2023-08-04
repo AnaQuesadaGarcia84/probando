@@ -43,8 +43,9 @@ function contacto(){
                 <input id="validar" class="enviar" type="button" value="Enviar">
             </div>
         </form>
+        <p>Texto legalísimo...</p>
     </div>
     <div class="contenido2">
-        <p>Texto legal</p>
+        
     </div>`
 }

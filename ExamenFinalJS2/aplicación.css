@@ -114,6 +114,7 @@ input{
     background-repeat: no-repeat;
     background-size: cover;
     font-size: 1.2em;
+    text-align: center;
 }
 
 .curso video{

@@ -1,0 +1,11 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.contenedor{
+    display: grid;
+    grid-template-areas: 'header header'
+                        'aside cuerpo'
+                        'footer footer';
+}
