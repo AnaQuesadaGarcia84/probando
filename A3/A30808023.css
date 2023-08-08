@@ -16,14 +16,31 @@ header{
 
     display:grid;
     grid-template-columns: repeat(5, 1fr);
-    justify-content: end;
-    align-items: center;
+    grid-template-rows: repeat(3, 1fr);
+    justify-content: center;
+    /* align-items: end;  */
 }
 
-.puntos {
-    margin: auto;
+.item2, .item4, .item6, .item8, .item10, .item12, .item14{
+    display: flex;
+} 
+
+.item2, .item4{
+    align-items: end;
+    justify-content: center;
+}
+
+.item6{
+    align-items: start;
+    justify-content: center;
+}
+
+.item8{
+    align-items: center;
+    justify-content: center; 
 }
 
 footer{
     min-height: 5vh;
 }
+
