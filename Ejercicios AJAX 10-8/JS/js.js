@@ -1,30 +1,28 @@
-    $(document).ready(function(){
-    //Añadir contenido desde el exterior
-    // $('#datos').load('https://reqres.in/')
-
-   //Para recoger los datos petición AJAX
+$(document).ready(function(){
+    
+    //Para recoger los datos petición AJAX
     $.get('https://reqres.in/api/users',{page:2},function(respuesta){
         respuesta.data.forEach((element, index)=>{
-            $('#datos').append('<p>'+element.first_name+" "+ element.last_name+'</p>');
+            $('#mostrar').append('<p>'+element.first_name+" "+ element.last_name+'</p>');
         });
     });
 
     //Para enviar los datos desde AJAX
-    $('#formulario').submit(function(e){
+    $('#formulario').submit(function(e){ 
         e.preventDefault();
+
+        //Recogemos los datos desde los inputs
         var usuario={
-            nombre: $('input[name="nombre"]').val(),
-            web: $('input[name="web"]').val(),
-        };
+            codigo: $('#codigo').val(),
+            nombre: $('#nombre').val(),
+            apellidos:$('#apellidos').val(),
+            mail:$('#mail').val(),
+            edad:$('#edad').val(),
+            fotografia:$('#fotografia').val(),
+        }
 
-        //Método POST
-        // $.post($(this).attr("action"), usuario, function(respuesta){
-        //     console.log(respuesta);
-        // }).done(function(){
-        //     alert('Usuario añadido correctamente');
-        // });
+        //console.log(usuario);
 
-        //Método AJAX
         $.ajax({
             type: 'POST',
             url:$(this).attr("action"),
@@ -42,7 +40,6 @@
         })
 
     });
-
-
+    
 
 });//Cierre del READY FUNCTION
