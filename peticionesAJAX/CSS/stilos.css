@@ -1,0 +1,7 @@
+#datos{
+    border: 2px solid green;
+    width: 400px;
+    height: 400px;
+    /*Nos crea una barra de Scroll si el contenido es más largo que el contenedor*/
+    overflow: scroll;
+}
