@@ -40,23 +40,23 @@ else{
     console.log("No disponible");
 }
 
-//Guardar datos
-localStorage.setItem('Listado', "Listado de Alumnos");
+// //Guardar datos
+// localStorage.setItem('Listado', "Listado de Alumnos");
 
-//Recuperar datos
-localStorage.getItem('Listado');
+// //Recuperar datos
+// localStorage.getItem('Listado');
 
-//Guardamos objetos JSON
-localStorage.setItem('alumno', JSON.stringify(alumno));
+// //Guardamos objetos JSON
+// localStorage.setItem('alumno', JSON.stringify(alumno));
 
-//Recuperamos objetos JSON
-var alumnoJS=JSON.parse(localStorage.getItem("alumno"));
-console.log(alumnoJS)
-document.querySelector('#totalAlumnos').append(alumnoJS.nombre+" --- "+ alumnoJS.correo+" --- "+alumnoJS.telefono);
+// //Recuperamos objetos JSON
+// var alumnoJS=JSON.parse(localStorage.getItem("alumno"));
+// console.log(alumnoJS)
+// document.querySelector('#totalAlumnos').append(alumnoJS.nombre+" --- "+ alumnoJS.correo+" --- "+alumnoJS.telefono);
 
 //Borrar un item por su palabra clave
 //localStorage.removeItem('Listado');
 
 //Para borrarlo todo
-//localStorage.clear();
+localStorage.clear();
 

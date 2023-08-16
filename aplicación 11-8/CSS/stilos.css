@@ -10,6 +10,7 @@ header{
     width: 100%;
     display: flex;
     padding: 1em;
+    background-color: rgb(226, 243, 249);
 }
 
  nav{
@@ -34,8 +35,13 @@ header{
     background-color: #003366;
     border: #003366;
     color: lightblue;
-    box-shadow: lightblue 4px 4px 4px;
+    box-shadow: rgb(125, 173, 189) 4px 4px 4px;
     cursor: pointer;
+ }
+
+ .publi{
+    background-color: rgb(226, 243, 249);
+    padding: 1.3em;
  }
 
  .eslogan{
@@ -137,4 +143,20 @@ input{
 /* Estilos H2 */
 h2{
     text-align: center;
+}
+
+/* Estilos del botón alto contraste */
+.contraste{
+    background-color: #003366;
+    border: #003366 2px;
+    color: lightblue;
+    font-weight: bold;
+    width: 31.5%;
+}
+
+.contraste:hover{
+    background-color: black;
+    border: black 2px;
+    color: white;
+    box-shadow: rgb(65, 65, 65) 3px 3px 3px;
 }
