@@ -10,7 +10,7 @@ header{
     width: 100%;
     display: flex;
     padding: 1em;
-    background-color: rgb(226, 243, 249);
+    background-color: #e2f3f9;
 }
 
  nav{
@@ -35,7 +35,7 @@ header{
     background-color: #003366;
     border: #003366;
     color: lightblue;
-    box-shadow: rgb(125, 173, 189) 4px 4px 4px;
+    box-shadow: #7dadbd 4px 4px 4px;
     cursor: pointer;
  }
 
@@ -158,5 +158,6 @@ h2{
     background-color: black;
     border: black 2px;
     color: white;
-    box-shadow: rgb(65, 65, 65) 3px 3px 3px;
+    box-shadow: #7dadbd 3px 3px 3px;
 }
+
