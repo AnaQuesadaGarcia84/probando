@@ -1,4 +1,3 @@
-
 $(document).ready(function () {
     const contenido=$('#contenido')
 
@@ -7,7 +6,7 @@ $(document).ready(function () {
         var registro= `
             <div class="inicio">
                 <h2>Inicia sesión</h2>
-                <form action="">
+                <form action="" id="inicioSesi">
                     <input type="text" name="usuario" id="usuario" placeholder="Usuario"><br>
                     <input type="password" name="contrasena" id="contrasena" placeholder="Contraseña"><br>
                     <input type="submit" value="Iniciar sesión" id="iniciar" class="iniciar">
@@ -16,6 +15,32 @@ $(document).ready(function () {
 
         contenido.empty();
         contenido.append(registro);
+
+        $('#inicioSesi').submit(function(e){
+            e.preventDefault()
+
+            var usuarioReg= 'AdminLuis';
+            var contraReg= 1234;
+
+            var usuIni=$('#usuario').val();
+            var contraIni=$('#contrasena').val();
+
+            console.log(usuIni+" "+contraIni);
+
+            if (usuarioReg!=usuIni || contraReg!=contraIni) {
+                alert('No se ha podido iniciar sesión, vuelve a intentarlo');
+            }
+            else if(usuarioReg==usuIni && contraReg==contraIni){
+                var iniciado=`
+                <h3>Bienvenido Luis</h3>
+                <h4>Administrador del sistema</h4>`;
+                $('#iniciado').html(iniciado);
+            }
+            else{
+                return;
+            }
+        });
+
     })
 
     //Insertamos el contenido de REGISTRO
@@ -225,6 +250,7 @@ $(document).ready(function () {
         $('#footer li a').css('color', '#003366');
     });
 
+    
 
 });
 
